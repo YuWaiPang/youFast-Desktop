@@ -26,6 +26,8 @@ email: max@youfast.net
 
 website: youfast.net
 
+Company Name: YOUFAST.NET (優快通)
+
 Linkedin: https://www.linkedin.com/in/max01/
 
 youTube: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
