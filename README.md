@@ -22,6 +22,8 @@ If the download file icon you see in your computer is same as icon in StartupScr
 
 You can download yoyFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
+After you click runtime file, a folder "uSpace" will be created automatically.
+
 Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
 
 An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
@@ -31,6 +33,8 @@ email: max@youfast.net
 Website: youfast.net
 
 Company Name: YOUFAST.NET (優快通)
+
+Sponsor Site: https://www.patreon.com/lamiyu
 
 Linkedin profile: https://www.linkedin.com/in/max01/
 
