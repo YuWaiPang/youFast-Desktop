@@ -21,7 +21,7 @@ Javascript Framework / Library: none
 
 If the download file icon you see in your computer is the same as the icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
-You can download yoyFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
+You can download youFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
 After you click the runtime file, a folder "uSpace" will be created automatically.Inside the folder you can see there are 32 csv files with folder "exportedFile". This folder is used to keep all downloaded report files. Please note that all simulated file names are reserved by the system, so your data file should not use these file names.
 
