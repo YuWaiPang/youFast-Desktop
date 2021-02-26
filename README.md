@@ -24,7 +24,7 @@ youFast Cloud is hosted in http://cloud.youfast.net
 
 email: max@youfast.net
 
-website: youfast.net
+Website: youfast.net
 
 Company Name: YOUFAST.NET (優快通)
 
