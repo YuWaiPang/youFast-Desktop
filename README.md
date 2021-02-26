@@ -42,8 +42,6 @@ Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfa
 
 An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
 
-==========================================================================
-
 # youFast Desktop Features
 
 ➾ using C#, Vanilla JavaScript and W3.css for an integrated frontend to backend Web development, it do not implement any javascript framework or library
