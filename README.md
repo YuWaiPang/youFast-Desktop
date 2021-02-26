@@ -20,9 +20,9 @@ Javascript Framework / Library: none
 
 If the download file icon you see in your computer is same as icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
-You can download runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
+You can download yoyFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
-youFast Cloud is hosted in http://cloud.youfast.net
+youFast Cloud currently is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net
 
 email: max@youfast.net
 
