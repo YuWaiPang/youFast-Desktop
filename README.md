@@ -1,9 +1,9 @@
 # youFast-Desktop
 This youFast version is designed for running calculation engine and websocket server in Windows Desktop. 
 
-It support Windows 7 and Windows 10.
+It supports Windows 7 and Windows 10.
 
-It has following dependency:-
+youFast Desktop has following dependency:-
 
 Microsoft .net 4.7.2 or 4.8  
 OR Microsoft .net core 3.1 or above
@@ -22,7 +22,9 @@ If the download file icon you see in your computer is same as icon in StartupScr
 
 You can download yoyFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
-youFast Cloud currently is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net
+Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net
+
+youFast.net is going to the Cloud https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
 
 email: max@youfast.net
 
@@ -30,7 +32,7 @@ Website: youfast.net
 
 Company Name: YOUFAST.NET (優快通)
 
-Linkedin: https://www.linkedin.com/in/max01/
+Linkedin profile: https://www.linkedin.com/in/max01/
 
 youTube: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
