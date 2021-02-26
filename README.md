@@ -3,7 +3,7 @@ This youFast version is designed for running a calculation engine and a websocke
 
 It supports Windows 7 and Windows 10.
 
-youFast Desktop has following dependency:-
+youFast Desktop has the following dependencies:-
 
 ➾ Microsoft .net 4.7.2 or 4.8  
 ➾ OR Microsoft .net core 3.1 or above
