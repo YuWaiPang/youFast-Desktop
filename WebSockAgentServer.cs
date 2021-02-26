@@ -118,8 +118,9 @@ namespace youFast
                 userPreference["system"].serverIP = myIP4V_List[1];
             }
 
-            Console.WriteLine("youFast websocket server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);                     
-           
+            Console.WriteLine("youFast websocket server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
+            Console.WriteLine("Please open web browser with URL http://desktop.youfast.net");
+
             StringBuilder html = new StringBuilder();          
 
             byte[] contentByte = Encoding.ASCII.GetBytes(html.ToString());
@@ -129,14 +130,10 @@ namespace youFast
                 "Server: WebServer 1.0" + "\r\n" +
                 "Content-Length: " + contentByte.Length + "\r\n" +
                 "Content-Type: text/html" +
-                "\r\n" + "\r\n";
-            
+                "\r\n" + "\r\n";            
 
-            byte[] headerByte = Encoding.ASCII.GetBytes(htmlHeader);         
-            
-
-            if (userPreference["system"].os == "Windows Client")
-                System.Diagnostics.Process.Start("http://desktop.youfast.net");
+            byte[] headerByte = Encoding.ASCII.GetBytes(htmlHeader);                     
+        
 
             WebSocketServer wsServer = new WebSocketServer("ws://" + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
            

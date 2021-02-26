@@ -141,44 +141,8 @@ namespace clientMachine
             userPreference.TryAdd("system", new userPreference());
 
             OperatingSystem os = Environment.OSVersion;
-            PlatformID pid = os.Platform;                       
-
-            switch (pid)
-            {
-                case PlatformID.Win32NT:               
-                case PlatformID.Win32S:
-                case PlatformID.Win32Windows:
-                case PlatformID.WinCE:
-                {
-                    string subKey = @"SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion";
-                    Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.LocalMachine;
-                    Microsoft.Win32.RegistryKey skey = key.OpenSubKey(subKey);
-
-                    if (skey.GetValue("ProductName").ToString().ToUpper().Contains("SERVER"))
-                        userPreference["system"].os = "Windows Server";
-                    else
-                        userPreference["system"].os = "Windows Client";
-                       
-                        userPreference["system"].slash = "\\";
-                         Console.WriteLine("youFast in-memory database server is running on " + skey.GetValue("ProductName").ToString() + " (" + os.Version.Major + "." + os.Version.Minor + "." + os.Version.Build + ")");                       
-                    break;
-                }                   
-                case PlatformID.Unix:
-                {                      
-                    userPreference["system"].os = "Linux";
-                    userPreference["system"].slash = "/";
-                    Console.WriteLine("youFast in-memory database server is running on Linux");                   
-                    break;
-                }
-                case PlatformID.MacOSX:
-                {
-                    userPreference["system"].os = "Mac";                     
-                    break;
-                }
-                default:
-                    Console.WriteLine("No Idea what I'm on!");
-                    break;
-            }
+            userPreference["system"].os = "Windows Client";
+            userPreference["system"].slash = "\\";           
 
             int iteration = 1;
             string outputFolder = "uSpace" + userPreference["system"].slash + "exportedFile" + userPreference["system"].slash;
