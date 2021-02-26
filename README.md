@@ -1,4 +1,4 @@
-# youFast-Desktop
+# youFast Desktop How-To
 This youFast version is designed for running a calculation engine and a websocket server in Windows Desktop. 
 
 It supports Windows 7 and Windows 10.
@@ -24,9 +24,8 @@ You can download youFast Desktop runtime from https://www.linkedin.com/pulse/you
 
 After you click the runtime file, a folder "uSpace" will be created automatically.Inside the folder you can see there are 32 csv files with folder "exportedFile". This folder is used to keep all downloaded report files. Please note that all simulated file names are reserved by the system, so your data file should not use these file names.
 
-Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
 
-An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
+# youFast Desktop Contact
 
 email: max@youfast.net
 
@@ -43,7 +42,11 @@ youTube: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 ==========================================================================
 
-Features:- 
+# youFast Desktop Features
+
+Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
+
+An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
 
 ➾ using C#, Vanilla JavaScript and W3.css for an integrated frontend to backend Web development, it do not implement any javascript framework or library
 
