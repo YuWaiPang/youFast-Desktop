@@ -30,7 +30,7 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 ➾ using C#, Vanilla JavaScript and W3.css for an integrated frontend to backend Web development, it do not implement any javascript framework or library
 
-➾  real-time web technology use Fleck websocket, source code is embedded in the project
+➾  real-time web technology use Fleck websocket
 
 ➾  the project do not have dependency other than .net 4.7.2, .net 5 or .net core 3.1, actually the web implementation has not yet using asp.net or asp.net core
 
