@@ -1,10 +1,14 @@
 # youFast-Desktop
-This youFast version is designed for running calculation engine in Windows Desktop. It support Windows 7 and Windows 10.
+This youFast version is designed for running calculation engine and websocket server in Windows Desktop. 
+
+It support Windows 7 and Windows 10.
 
 It has following dependency:-
 
 Microsoft .net 4.71 or 4.8  
 OR Microsoft .net core 3.1 or above
+
+http server is using bluehost.com with url http://desktop.youfast.net/
 
 Fleck Websocket Library  https://github.com/statianzo/Fleck
 
