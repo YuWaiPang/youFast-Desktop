@@ -1,5 +1,4 @@
 # youFast-Desktop
-# youFast-Desktop
 This youFast version is designed for running a calculation engine and a websocket server in Windows Desktop. 
 
 It supports Windows 7 and Windows 10.
