@@ -12,7 +12,9 @@ http server is using bluehost.com with url http://desktop.youfast.net/
 
 If the icon you see in your computer is same as download report icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
-Fleck Websocket Library  https://github.com/statianzo/Fleck
+Fleck Websocket Library:  https://github.com/statianzo/Fleck
+
+Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
 
 CSS Framework: w3.css (built-in C# code)
 
