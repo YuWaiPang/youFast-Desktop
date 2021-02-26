@@ -26,22 +26,6 @@ After you click the runtime file, a folder "uSpace" will be created automaticall
 
 Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
-# youFast Desktop Contacts
-
-email: max@youfast.net
-
-Website: youfast.net
-
-Company Name: YOUFAST.NET (優快通)
-
-Sponsor Site: https://www.patreon.com/lamiyu
-
-Linkedin profile: https://www.linkedin.com/in/max01/
-
-Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
-
-An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
-
 # youFast Desktop Features
 
 ➾ using C#, Vanilla JavaScript and W3.css for an integrated frontend to backend Web development, it do not implement any javascript framework or library
@@ -69,6 +53,23 @@ An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/p
 ➾  the app can run on a share drive and USB memory stick
 
 ➾  this project is maintained up to 100% C# source code (i.e. no call for external dll)
+
+# youFast Desktop Contacts
+
+email: max@youfast.net
+
+Website: youfast.net
+
+Company Name: YOUFAST.NET (優快通)
+
+Sponsor Site: https://www.patreon.com/lamiyu
+
+Linkedin profile: https://www.linkedin.com/in/max01/
+
+Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
+
+An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
+
 
 
 
