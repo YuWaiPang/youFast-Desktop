@@ -18,7 +18,7 @@ Please copy the folder of "Fleck/src/Fleck/" to your project folder along with o
 
 ➾ Javascript Framework / Library: none
 
-If the download file icon you see in your computer is same as the icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
+If the download file icon you see in your computer is same as the icon in the StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
 You can download youFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
