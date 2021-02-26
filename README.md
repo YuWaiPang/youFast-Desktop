@@ -5,7 +5,7 @@ It support Windows 7 and Windows 10.
 
 It has following dependency:-
 
-Microsoft .net 4.71 or 4.8  
+Microsoft .net 4.7.2 or 4.8  
 OR Microsoft .net core 3.1 or above
 
 http server is using bluehost.com with url http://desktop.youfast.net/
