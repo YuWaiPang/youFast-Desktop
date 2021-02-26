@@ -18,7 +18,7 @@ CSS Framework: w3.css (built-in C# code)
 
 Javascript Framework / Library: none
 
-If the icon you see in your computer is same as download report icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
+If the download file icon you see in your computer is same as icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
 You can download runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
