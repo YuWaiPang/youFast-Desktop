@@ -5,18 +5,18 @@ It supports Windows 7 and Windows 10.
 
 youFast Desktop has following dependency:-
 
-Microsoft .net 4.7.2 or 4.8  
-OR Microsoft .net core 3.1 or above
+➾ Microsoft .net 4.7.2 or 4.8  
+➾ OR Microsoft .net core 3.1 or above
 
-http server is using bluehost.com with url http://desktop.youfast.net/
+➾ http server is using bluehost.com with url http://desktop.youfast.net/
 
-Fleck Websocket Library:  https://github.com/statianzo/Fleck
+➾ Fleck Websocket Library:  https://github.com/statianzo/Fleck
 
 Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
 
-CSS Framework: w3.css (built css code within C# code)
+➾ CSS Framework: w3.css (built css code within C# code)
 
-Javascript Framework / Library: none
+➾ Javascript Framework / Library: none
 
 If the download file icon you see in your computer is the same as the icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
