@@ -10,8 +10,6 @@ OR Microsoft .net core 3.1 or above
 
 http server is using bluehost.com with url http://desktop.youfast.net/
 
-If the icon you see in your computer is same as download report icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
-
 Fleck Websocket Library:  https://github.com/statianzo/Fleck
 
 Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
@@ -19,6 +17,8 @@ Please copy the folder of "Fleck/src/Fleck/" to your project folder along with o
 CSS Framework: w3.css (built-in C# code)
 
 Javascript Framework / Library: none
+
+If the icon you see in your computer is same as download report icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
 You can download runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
