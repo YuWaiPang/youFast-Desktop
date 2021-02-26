@@ -10,6 +10,8 @@ OR Microsoft .net core 3.1 or above
 
 http server is using bluehost.com with url http://desktop.youfast.net/
 
+If the icon you see in your computer is same as icon in StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
+
 Fleck Websocket Library  https://github.com/statianzo/Fleck
 
 CSS Framework: w3.css (built-in C# code)
@@ -27,5 +29,4 @@ website: youfast.net
 Linkedin: https://www.linkedin.com/in/max01/
 
 youTube: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
-
 
