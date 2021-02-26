@@ -14,7 +14,7 @@ Fleck Websocket Library:  https://github.com/statianzo/Fleck
 
 Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
 
-CSS Framework: w3.css (built-in C# code)
+CSS Framework: w3.css (built css code within C# code)
 
 Javascript Framework / Library: none
 
