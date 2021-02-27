@@ -354,7 +354,7 @@ namespace youFast
 
                         string dotNetVersion = Environment.Version.ToString();
 
-                        if (dotNetVersion.Substring(10, 1) == "4")
+                        if (dotNetVersion.Substring(0, 1) == "4")
                         {
                             if (fi2.Exists)
                             {
@@ -636,7 +636,7 @@ namespace youFast
 
                         string dotNetVersion = Environment.Version.ToString();
 
-                        if (dotNetVersion.Substring(10, 1) == "4")
+                        if (dotNetVersion.Substring(0, 1) == "4")
                         {
                             if (fi.Exists)
                             {
@@ -1081,7 +1081,7 @@ namespace youFast
 
                         string dotNetVersion = Environment.Version.ToString();
 
-                        if (dotNetVersion.Substring(10, 1) == "4")
+                        if (dotNetVersion.Substring(0, 1) == "4")
                         {
                             if (fi2.Exists)
                             {
@@ -1439,7 +1439,7 @@ namespace youFast
 
                         string dotNetVersion = Environment.Version.ToString();
 
-                        if (dotNetVersion.Substring(10, 1) == "4")
+                        if (dotNetVersion.Substring(0, 1) == "4")
                         {
                             if (fi.Exists)
                             {

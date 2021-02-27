@@ -121,10 +121,11 @@ namespace youFast
             Console.WriteLine("youFast websocket server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
             Console.WriteLine("Please open web browser with URL http://desktop.youfast.net");
 
-            string dotNetVersion = Environment.Version.ToString();           
+            string dotNetVersion = Environment.Version.ToString();
+            Console.WriteLine(dotNetVersion);
 
             if (userPreference["system"].os == "Windows Client")
-                if(dotNetVersion.Substring(10, 1) == "4")
+                if(dotNetVersion.Substring(0, 1) == "4")
                     System.Diagnostics.Process.Start("http://desktop.youfast.net");
 
             StringBuilder html = new StringBuilder();          
