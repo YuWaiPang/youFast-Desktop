@@ -1,17 +1,24 @@
-﻿using System;
+﻿using Fleck;
+using System;
+using System.IO;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Fleck;
+using System.Security.Cryptography.X509Certificates;
 
 namespace youFast
 {
     public class WebSockAgentServer
-    {      
+    {
+        TcpListener httpServer;
+        TcpListener websocketServer;
+        List<TcpClient> httpClients = new List<TcpClient>();
+        List<TcpClient> websocketClients = new List<TcpClient>();
         Dictionary<string, Dictionary<int, List<double>>> ramDetail = new Dictionary<string, Dictionary<int, List<double>>>();
         Dictionary<string, Dictionary<int, Dictionary<double, string>>> ramK2V = new Dictionary<string, Dictionary<int, Dictionary<double, string>>>();
         Dictionary<string, Dictionary<int, Dictionary<double, double>>> ramMapping = new Dictionary<string, Dictionary<int, Dictionary<double, double>>>();
@@ -119,24 +126,35 @@ namespace youFast
             }
 
             Console.WriteLine("youFast websocket server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
-            Console.WriteLine("Please open web browser with URL http://desktop.youfast.net");
 
-            StringBuilder html = new StringBuilder();          
+            Javascript homepage = new Javascript();
+            StringBuilder html = new StringBuilder();
+            homepage.distinctDesktopHtml(userPreference, html);
 
             byte[] contentByte = Encoding.ASCII.GetBytes(html.ToString());
-
-            
             string htmlHeader = "HTTP/1.0 200 OK" + "\r\n" +
                 "Server: WebServer 1.0" + "\r\n" +
                 "Content-Length: " + contentByte.Length + "\r\n" +
                 "Content-Type: text/html" +
-                "\r\n" + "\r\n";            
+                "\r\n" + "\r\n";
 
-            byte[] headerByte = Encoding.ASCII.GetBytes(htmlHeader);                     
-        
+            byte[] headerByte = Encoding.ASCII.GetBytes(htmlHeader);
 
-            WebSocketServer wsServer = new WebSocketServer("ws://" + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
+            /*
+            httpConnect2Accept(userPreference, headerByte, contentByte);
+
+            if (userPreference["system"].os == "Windows Client")
+                System.Diagnostics.Process.Start("http://" + userPreference["system"].serverIP + ":" + userPreference["system"].httpPort);
            
+
+            if (userPreference["system"].os == "Windows Client")
+                System.Diagnostics.Process.Start("http://desktop.youfast.net");
+
+             */
+
+            WebSocketServer wsServer = new WebSocketServer("wss://" + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
+            wsServer.Certificate = new X509Certificate2("youFast.crt");
+
             queueThread.TryAdd(1, new Thread(() => requestQueue2Thread(requestID2SessionIDsending, requestID2SessionIDsent, isResponse, requestID2SessionID, wsServerSessionID, errorMessageLog, ramMapping, copyMemDetailRandomly, userPreference, tableFact, currentRequestID, sourceFolder, csvReadSeparator, db1Folder, iteration, outputFolder, csvWriteSeparator, clientSessionVariable, requestDict,  responseDict, forwardMessage, htmlTable, ramDetail, ramK2V, incomingRequestQueue, request2Response, cancelRequestID, isRemove, currentDateTime, screenControl)));
             queueThread[1].Start();        
 
@@ -149,7 +167,14 @@ namespace youFast
                     wsServerSessionID.Add(socket);                
                  
                     Console.WriteLine(string.Format("youFast websocket client " + socket.ConnectionInfo.Id + " connected at " + socket.ConnectionInfo.ClientIpAddress + ":" + socket.ConnectionInfo.ClientPort + " Current connecton count is " + wsServerSessionID.Count));                                       
-                   
+
+                    /*
+                    foreach (var client in socket.ConnectionInfo.Cookies)
+                        Console.WriteLine("Cookies " + client);
+
+                    foreach (var client in socket.ConnectionInfo.Headers)              
+                        Console.WriteLine("Header " + client);
+                        */
                 };
 
                 socket.OnClose = () =>
@@ -243,9 +268,157 @@ namespace youFast
                 };
                
         });
-          
+            //  WinSockClient client = new WinSockClient();           
+
+            //  client.winSock(iteration, outputFolder, forwardMessage, csvWriteSeparator, columnName2ID, htmlTable, clientSessionVariable, requestDict,  responseDict, ramDetailgz, ramKey2Valuegz, ramValue2Keygz, ramKey2Order, ramOrder2Key);
         }
-     
+        public async void websocketConnect2Accept(ConcurrentDictionary<string, clientMachine.userPreference> userPreference, byte[] headerByte, byte[] contentByte)
+        {
+
+            websocketServer = new TcpListener(IPAddress.Parse(userPreference["system"].serverIP), Int32.Parse(userPreference["system"].httpPort));
+            try
+            {
+                websocketServer.Start();
+                Console.WriteLine("youFast websocket server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].httpPort);
+                Console.WriteLine(); Console.WriteLine();
+
+                while (true)
+                {
+                    TcpClient websocketClient = await websocketServer.AcceptTcpClientAsync();
+
+                    httpClients.Add(websocketClient);
+                    Console.WriteLine(string.Format("youFast client connected at " + websocketClient.Client.RemoteEndPoint + " Current connecton count is " + httpClients.Count));
+                    websocketRequest2Response(websocketClient, headerByte, contentByte);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+        }
+        private async void websocketRequest2Response(TcpClient websocketClient, byte[] headerByte, byte[] contentByte)
+        {
+            int segmentSize;
+            NetworkStream stream = websocketClient.GetStream();
+            StreamReader reader = new StreamReader(stream);
+            char[] messageSegment = new char[128];
+            string receivedMessage = null;
+
+            try
+            {
+                while (true)
+                {
+                    segmentSize = await reader.ReadAsync(messageSegment, 0, messageSegment.Length);
+                    // Console.WriteLine("segmentSize = " + segmentSize + "  " + httpClient.Client.RemoteEndPoint);
+
+                    if (segmentSize == 0)
+                    {
+                        removeWebsocketClient(websocketClient);
+                        break;
+                    }
+
+                    receivedMessage = new string(messageSegment);
+
+                    Console.WriteLine(receivedMessage);
+
+                    Array.Clear(messageSegment, 0, messageSegment.Length);
+
+                    if (receivedMessage.Contains("Connection"))
+                    {
+                        websocketClient.GetStream().WriteAsync(headerByte, 0, headerByte.Length);
+                        websocketClient.GetStream().WriteAsync(contentByte, 0, contentByte.Length);
+                    }
+
+
+                }
+            }
+            catch (Exception e)
+            {
+                removeWebsocketClient(websocketClient);
+                Console.WriteLine("Client Disconnected Exception" + e);
+            }
+        }
+        private void removeWebsocketClient(TcpClient httpClient)
+        {
+            if (websocketClients.Contains(httpClient))
+            {
+                websocketClients.Remove(httpClient);
+                // Console.WriteLine(String.Format("Client removed, count: {0}", websocket.Count));
+            }
+        }
+        public async void httpConnect2Accept(ConcurrentDictionary<string, clientMachine.userPreference> userPreference, byte[] headerByte, byte[] contentByte)
+        {
+            httpServer = new TcpListener(IPAddress.Parse(userPreference["system"].serverIP), Int32.Parse(userPreference["system"].httpPort));
+            try
+            {
+                httpServer.Start();
+                Console.WriteLine("youFast http server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].httpPort);
+                Console.WriteLine(); Console.WriteLine();
+
+                while (true)
+                {
+                    TcpClient httpClient = await httpServer.AcceptTcpClientAsync();
+
+                    httpClients.Add(httpClient);                    
+                    Console.WriteLine(string.Format("youFast http client connected at " + httpClient.Client.RemoteEndPoint + " Current connecton count is " + httpClients.Count));
+                    httpRequest2Response(httpClient, headerByte, contentByte);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+        }
+        private async void httpRequest2Response(TcpClient httpClient, byte[] headerByte, byte[] contentByte)
+        {          
+            int segmentSize;
+            NetworkStream stream = httpClient.GetStream();
+            StreamReader reader = new StreamReader(stream);
+            char[] messageSegment = new char[128];
+            string receivedMessage = null;
+
+            try
+            {
+                while (true)
+                {
+                    segmentSize = await reader.ReadAsync(messageSegment, 0, messageSegment.Length);
+                    // Console.WriteLine("segmentSize = " + segmentSize + "  " + httpClient.Client.RemoteEndPoint);
+
+                    if (segmentSize == 0)
+                    {
+                        removeHttpClient(httpClient);
+                        break;
+                    }
+                   
+                    receivedMessage = new string(messageSegment);
+
+                   // Console.WriteLine(receivedMessage);
+
+                    Array.Clear(messageSegment, 0, messageSegment.Length);
+
+                    if (receivedMessage.Contains("Connection"))
+                    {
+                        httpClient.GetStream().WriteAsync(headerByte, 0, headerByte.Length);
+                        httpClient.GetStream().WriteAsync(contentByte, 0, contentByte.Length);
+                    }
+
+                    
+                }               
+            }
+            catch (Exception e)
+            {               
+                removeHttpClient(httpClient);
+                Console.WriteLine("Client Disconnected Exception" + e);
+            }
+        }
+        private void removeHttpClient(TcpClient httpClient)
+        {
+            if (httpClients.Contains(httpClient))
+            {
+                httpClients.Remove(httpClient);
+               // Console.WriteLine(String.Format("Client removed, count: {0}", mClients.Count));
+            }
+        }
         public void requestQueue2Thread(ConcurrentDictionary<decimal, string> requestID2SessionIDsending, ConcurrentDictionary<decimal, string> requestID2SessionIDsent, ConcurrentDictionary<string, bool> isResponse, ConcurrentDictionary<decimal, IWebSocketConnection> requestID2SessionID, List<IWebSocketConnection> wsServerSessionID, string errorMessageLog, Dictionary<string, Dictionary<int, Dictionary<double, double>>> ramMapping, ConcurrentDictionary<string, int> copyMemDetailRandomly, ConcurrentDictionary<string, clientMachine.userPreference> userPreference, ConcurrentDictionary<string, ConcurrentDictionary<int, int>> tableFact, ConcurrentDictionary<int, decimal> currentRequestID, string sourceFolder, byte csvReadSeparator, string db1Folder, int iteration, string outputFolder, char csvWriteSeparator, ConcurrentDictionary<string, clientMachine.clientSession> clientSessionVariable, ConcurrentDictionary<decimal, clientMachine.request> requestDict, ConcurrentDictionary<decimal, clientMachine.response> responseDict, Dictionary<int, string> forwardMessage, Dictionary<int, StringBuilder> htmlTable, Dictionary<string, Dictionary<int, List<double>>> ramDetail, Dictionary<string, Dictionary<int, Dictionary<double, string>>> remK2V, ConcurrentQueue<decimal> incomingRequestQueue, ConcurrentDictionary<decimal, Thread> request2Response, ConcurrentDictionary<decimal, int> cancelRequestID, bool isRemove, DateTime currentDateTime, Dictionary<decimal, Dictionary<string, StringBuilder>> screenControl)
         {
             Request2Report processRequest = new Request2Report();
@@ -275,7 +448,8 @@ namespace youFast
                                 Console.WriteLine($"request2Response fail '{e}'");
                             }
                         }
-                    }                   
+                    }
+                    //  Console.WriteLine(" isRequestID " + requestID + " Queue.Count " + incomingRequestQueue.Count +  " cancelRequestID.count " + cancelRequestID.Count + " completeJob.count " + request2Response.Count);
                 }
                 Thread.Sleep(2);
             }

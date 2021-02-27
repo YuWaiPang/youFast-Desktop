@@ -1,5 +1,4 @@
-﻿using Fleck;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using Fleck;
 
 namespace youFast
 {
@@ -1452,7 +1452,8 @@ namespace youFast
 
                 endEventTime = DateTime.Now;
 
-                timeout = (Convert.ToDouble(endEventTime.ToOADate()) - Convert.ToDouble(startEventTime.ToOADate())) * 100000;               
+                timeout = (Convert.ToDouble(endEventTime.ToOADate()) - Convert.ToDouble(startEventTime.ToOADate())) * 100000;
+                // Console.WriteLine(timeout);
 
                 Thread.Sleep(userPreference["system"].eventMonitorSleep);               
 
