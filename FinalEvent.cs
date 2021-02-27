@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fleck;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Fleck;
 
 namespace youFast
 {
@@ -352,23 +352,28 @@ namespace youFast
 
                         isResponse[responseDict[requestID].serverSession] = true;
 
-                        if (fi2.Exists)
+                        string dotNetVersion = Environment.Version.ToString();
+
+                        if (dotNetVersion.Substring(10, 1) == "4")
                         {
-                            try
+                            if (fi2.Exists)
                             {
-                                using (Process exeProcess = Process.Start(@outputFolder + "distinct2DrillDown" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                try
                                 {
-                                    exeProcess.WaitForExit();
+                                    using (Process exeProcess = Process.Start(@outputFolder + "distinct2DrillDown" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                    {
+                                        exeProcess.WaitForExit();
+                                    }
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine($"please close file '{e}'");
                                 }
                             }
-                            catch (Exception e)
+                            else
                             {
-                                Console.WriteLine($"please close file '{e}'");
+                                //file doesn't exist
                             }
-                        }
-                        else
-                        {
-                            //file doesn't exist
                         }
                     }
                 }
@@ -628,23 +633,29 @@ namespace youFast
                         isResponse[responseDict[requestID].serverSession] = true;
 
                         FileInfo fi = new FileInfo(@outputFolder + "distinct" + fileNo.ToString() + "_" + requestDict[requestID].importFile);
-                        if (fi.Exists)
+
+                        string dotNetVersion = Environment.Version.ToString();
+
+                        if (dotNetVersion.Substring(10, 1) == "4")
                         {
-                            try
+                            if (fi.Exists)
                             {
-                                using (Process exeProcess = Process.Start(@outputFolder + "distinct" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                try
                                 {
-                                    exeProcess.WaitForExit();
+                                    using (Process exeProcess = Process.Start(@outputFolder + "distinct" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                    {
+                                        exeProcess.WaitForExit();
+                                    }
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine($"please close file '{e}'");
                                 }
                             }
-                            catch (Exception e)
+                            else
                             {
-                                Console.WriteLine($"please close file '{e}'");
+                                //file doesn't exist
                             }
-                        }
-                        else
-                        {
-                            //file doesn't exist
                         }
                     }
                     else
@@ -1068,23 +1079,28 @@ namespace youFast
 
                         isResponse[responseDict[requestID].serverSession] = true;
 
-                        if (fi2.Exists)
+                        string dotNetVersion = Environment.Version.ToString();
+
+                        if (dotNetVersion.Substring(10, 1) == "4")
                         {
-                            try
+                            if (fi2.Exists)
                             {
-                                using (Process exeProcess = Process.Start(@outputFolder + "distinct2DrillDown" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                try
                                 {
-                                    exeProcess.WaitForExit();
+                                    using (Process exeProcess = Process.Start(@outputFolder + "distinct2DrillDown" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                    {
+                                        exeProcess.WaitForExit();
+                                    }
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine($"please close file '{e}'");
                                 }
                             }
-                            catch (Exception e)
+                            else
                             {
-                                Console.WriteLine($"please close file '{e}'");
+                                //file doesn't exist
                             }
-                        }
-                        else
-                        {
-                            //file doesn't exist
                         }
                     }
                 }
@@ -1421,23 +1437,28 @@ namespace youFast
 
                         isResponse[responseDict[requestID].serverSession] = true;
 
-                        if (fi.Exists)
+                        string dotNetVersion = Environment.Version.ToString();
+
+                        if (dotNetVersion.Substring(10, 1) == "4")
                         {
-                            try
+                            if (fi.Exists)
                             {
-                                using (Process exeProcess = Process.Start(@outputFolder + "crosstab" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                try
                                 {
-                                    exeProcess.WaitForExit();
+                                    using (Process exeProcess = Process.Start(@outputFolder + "crosstab" + fileNo.ToString() + "_" + requestDict[requestID].importFile))
+                                    {
+                                        exeProcess.WaitForExit();
+                                    }
+                                }
+                                catch (Exception e)
+                                {
+                                    Console.WriteLine($"please close file '{e}'");
                                 }
                             }
-                            catch (Exception e)
+                            else
                             {
-                                Console.WriteLine($"please close file '{e}'");
+                                //file doesn't exist
                             }
-                        }
-                        else
-                        {
-                            //file doesn't exist
                         }
                     }
                     else
@@ -1452,8 +1473,7 @@ namespace youFast
 
                 endEventTime = DateTime.Now;
 
-                timeout = (Convert.ToDouble(endEventTime.ToOADate()) - Convert.ToDouble(startEventTime.ToOADate())) * 100000;
-                // Console.WriteLine(timeout);
+                timeout = (Convert.ToDouble(endEventTime.ToOADate()) - Convert.ToDouble(startEventTime.ToOADate())) * 100000;               
 
                 Thread.Sleep(userPreference["system"].eventMonitorSleep);               
 
