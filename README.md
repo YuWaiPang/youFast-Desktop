@@ -8,6 +8,14 @@ youFast Desktop has the following dependencies:-
 ➾ Microsoft .net 4.7.2 or 4.8  
 ➾ OR Microsoft .net core 3.1 or above
 
+If you use Visual Studio to create a new project, please be reminded the following setting:-
+1) Create folder same as assembly name and namespace "youFast"
+2) Add reference: "System.IO.Compression.FileSystem
+3) Drag and drop folder "Fleck" and other cs file into C# youFast (one item below "Solution 'youFast' (1 of 1 project)
+4) Configure Platform target as x64
+
+If you use Visual Studio Code to create a new project, it is obviously simple.
+
 ➾ http server is using bluehost.com with url http://desktop.youfast.net/
 
 ➾ Fleck Websocket Library:  https://github.com/statianzo/Fleck
