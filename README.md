@@ -8,7 +8,7 @@ youFast Desktop has the following dependencies:-
 ➾ Microsoft .net 4.7.2 or 4.8  
 ➾ OR Microsoft .net core 3.1 or above
 
-If you use Visual Studio to create a new project, please be reminded the following setting:-
+If you use Visual Studio to create a new project, please be reminded the following settings:-
 1) Create folder same as assembly name and namespace "youFast"
 2) Add reference: "System.IO.Compression.FileSystem
 3) Drag and drop folder "Fleck" and other cs file into C# youFast (one item below "Solution 'youFast' (1 of 1 project)
