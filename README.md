@@ -27,7 +27,7 @@ If you use Visual Studio Code to create a new project, it is obviously simple.
 
 ➾ http server is using bluehost.com with url http://desktop.youfast.net/
 
-   Note: dotnet supports auto start this home page and auto oepn download file, but dotnet core not support this function.
+   Note: dotnet supports auto start this home page and auto open download file, but dotnet core not support this function.
 
 If the download file icon you see in your computer is same as the icon in the StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
