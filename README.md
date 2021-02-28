@@ -67,6 +67,8 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 # youFast Desktop Contacts
 
+youFast is developing in China (Hong Kong) - a wholly work from home project.
+
 Email: max@youfast.net
 
 Website: youfast.net
