@@ -87,7 +87,7 @@ youFast do not follow traditional approach to build data cube to support multi-d
 
 If your SQL Server implements the youFast algorithm, real-time SQL Server multidimensional reporting may be significantly faster.
 
-The contributor now evaluate next open source project. Initially, since he has strong background in finance department of some listed companies, his preference is to build a set of reusable libraries to support software developer to develope a high performance Finance ERP.
+The contributor now evaluate next open source project. Since he has strong background in finance department of some listed companies, his preference will consider to build a set of reusable libraries to support software developers to develope the next generation of Finance ERP.
 
 
 
