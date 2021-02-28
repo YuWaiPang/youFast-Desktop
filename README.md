@@ -1,4 +1,4 @@
-# Crosstab Report Query from its in-memory DB
+# Crosstab Report Query from Its In-memory DB
 ![10 Million Rows Test](https://github.com/YuWaiPang/youFast-Desktop/blob/main/youFast-10MillionRowQuery.png)
 
 # How-To
