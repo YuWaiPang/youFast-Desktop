@@ -21,15 +21,15 @@ If you use Visual Studio to create a new project, please be reminded the followi
 2) Add reference: "System.IO.Compression.FileSystem
 3) Drag and drop folder "Fleck" and other cs file into C# youFast (one item below "Solution 'youFast' (1 of 1 project))
 4) Configure Platform target as x64
-See this demo video using Visual Studo 2019 Community Edition to build the runtime of the open source "youFast Desktop". https://youtu.be/W51MFvmVH38
+See this demo video using Visual Studio 2019 Community Edition to build the runtime of the open source "youFast Desktop''. https://youtu.be/W51MFvmVH38
 
 If you use Visual Studio Code to create a new project, it is obviously simple.
 
 ➾ http server is using bluehost.com with url http://desktop.youfast.net/
 
-   Note: dotnet supports auto start this home page and auto open download file, but dotnet core does not support this function.
+   Note: dotnet supports auto start this home page and auto open download file, but dotnet core does not support this function.
 
-If the download file icon you see in your computer is same as the icon in the StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
+If the download file icon you see in your computer is the same as the icon in the StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
 You can download youFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
@@ -43,14 +43,14 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 ➾  real-time web technology use Fleck websocket
 
-➾  the project do not have dependency other than .net 4.7.2, .net 5 or .net core 3.1, actually the web implementation has not yet using asp.net or asp.net core
+➾  the project does not have dependency other than .net 4.7.2, .net 5 or .net core 3.1, actually the web implementation has not yet using asp.net or asp.net core
 
 ➾  build-in a key-value NoSQL database for in-memory and disk versions
 
 ➾  building a set of algorithms to maximize parallel computing operating units which is extended to a big csv file and an in-memory table
 
 ➾  ultra-fast data import to web crosstab report with drag & drop and drill down capabilities
- 
+ 
 ➾  interactive pivot table that lets you move X and Y columns with real-time drilldown by simple mouse actions
 
 ➾  crosstab report supports multi-level of analysis account trial balance by period/currency/region
@@ -83,12 +83,11 @@ An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/p
 
 # About SQL Server
 
-youFast do not follow traditional approach to build data cube to support multi-dimensional reporting. It is becuase build data cube is a very heavily computing exercise, time consuming, so it is unlikely can support real-time reporting. So youFast has built its distinctive algorithm to achieve real-time multidimensional reporting. 
+youFast does not follow traditional approach to build data cubes to support multi-dimensional reporting. It is because building a data cube is a very heavily computing exercise, time consuming, so it is unlikely can support real-time reporting. So youFast has built its distinctive algorithm to achieve real-time multidimensional reporting. 
 
 If your SQL Server implements the youFast algorithm, real-time SQL Server multidimensional reporting may be significantly faster.
 
-The contributor now evaluate next open source project. Since he has strong background in finance department of some listed companies, his preference will consider to build a set of reusable libraries to support software developers to develop the next generation of Finance ERP.
-
+The contributor now evaluates the next open source project. Since he has a strong background in the finance department of some listed companies, his preference will consider to build a set of reusable libraries to support software developers to develop the next generation of Finance ERP.
 
 
 
