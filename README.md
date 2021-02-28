@@ -49,7 +49,7 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 # youFast Desktop for Linux
 
-If you build the runtime for Ubuntu Desktop using dotnetcore 3.1, please amend 2 values of the Startup.cs.
+If you build the runtime for Ubuntu Desktop using Microsoft .net core 3.1, please amend 2 values of the Startup.cs.
 The contributor has tested for Ubuntu Linux and Oracle Linux, you can try other Linux.
 
 ➾ userPreference["system"].os = "Linux"; 
