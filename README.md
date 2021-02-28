@@ -1,5 +1,5 @@
 # youFast Desktop How-To
-This youFast version is designed for running a calculation engine and a websocket server in Windows Desktop. 
+This youFast version is designed for running a calculation engine and a websocket server in your Windows Desktop. It also supports to run in Linux, you need to install Visual Studio Code and build the runtime in Linux environment. In fact the youFast Cloud (http://cloud.youFast.net) is hosted in a linux cloud VM using Ubuntu 20.04.
 
 It supports Windows 7 and Windows 10.
 
