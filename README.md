@@ -79,9 +79,9 @@ Linkedin Profile: https://www.linkedin.com/in/max01/
 
 An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
 
-# About SQL Server
+# Sundry Matter
 
-youFast does not follow traditional approach to build data cubes to support multi-dimensional reporting. It is because building a data cube is a very heavily computing exercise, time consuming, so it is unlikely can support real-time reporting. So youFast has built its distinctive algorithm to achieve real-time multidimensional reporting. 
+youFast does not follow traditional approach to build data cubes to support multi-dimensional reporting. It is because building a data cube is a very heavily computing and time consuming exercise, so it is unlikely this approach can support real-time reporting. So youFast has built its distinctive algorithm to achieve real-time multidimensional reporting. 
 
 If your SQL Server implements the youFast algorithm, real-time SQL Server multidimensional reporting may be significantly faster.
 
