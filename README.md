@@ -65,7 +65,6 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 ➾  building a set of algorithms to maximize parallel computing operating units which is extended to a big csv file and an in-memory table
 
 ➾  ultra-fast data import to web crosstab report with drag & drop and drill down capabilities
-
  
 ➾  interactive pivot table that lets you move X and Y columns with real-time drilldown by simple mouse actions
 
