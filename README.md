@@ -1,5 +1,5 @@
 # youFast Desktop How-To
-This youFast version is designed for running a calculation engine and a websocket server in your Windows Desktop. It also supports to run in Linux, you need to install Visual Studio Code and build the runtime in Linux environment. In fact the youFast Cloud (http://cloud.youFast.net) is hosted in a linux cloud VM using Ubuntu 20.04.
+This youFast version is designed for running a calculation engine and a websocket server in your Windows Desktop. It also supports to run in Linux, you need to install Visual Studio Code and build the runtime in Linux environment. In fact the youFast Cloud (http://cloud.youFast.net) is hosted in a linux cloud VM using Ubuntu 20.04 using using Oracle Cloud Free Tier service (https://www.oracle.com/hk/cloud/free/).
 
 It supports Windows 7 and Windows 10.
 
@@ -77,8 +77,6 @@ Sponsor Site: https://www.patreon.com/lamiyu
 
 Linkedin Profile: https://www.linkedin.com/in/max01/
 
-Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
-
 An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
 
 # About SQL Server
@@ -88,6 +86,3 @@ youFast does not follow traditional approach to build data cubes to support mult
 If your SQL Server implements the youFast algorithm, real-time SQL Server multidimensional reporting may be significantly faster.
 
 The contributor now evaluates the next open source project. Since he has a strong background in the finance department of some listed companies, his preference will consider to build a set of reusable libraries to support software developers to develop the next generation of Finance ERP.
-
-
-
