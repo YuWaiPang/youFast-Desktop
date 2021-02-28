@@ -4,7 +4,7 @@
 # How-To
 This youFast Desktop edition is designed for running a calculation engine and a websocket server in your Windows Desktop. It also supports to run in Linux, you need to install Visual Studio Code and build the runtime in Linux environment. In fact the youFast Cloud (http://cloud.youFast.net) is hosted in a linux cloud VM using Ubuntu 20.04 using Oracle Cloud Free Tier service (https://www.oracle.com/hk/cloud/free/). If there are a demand in the future, may create one more open source repository to distribute youFast Cloud and how to documentation - enable you to build the youFast Cloud linux runtime and configuration of Oracle Cloud.
 
-It supports Windows 7, Windows 10 and Ubuntu Desktop 18.04 ~ 20.04 (the contributor has tested for Ubuntu Linux and Oracle Linux, you can try other Linux)
+It supports Windows 7, Windows 10 and Ubuntu Desktop 18.04 ~ 20.04 
 
 youFast Desktop has the following dependencies:-
 
@@ -48,7 +48,8 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 # youFast Desktop for Linux
 
-If you build the runtime for Ubuntu Desktop using dotnetcore 3.1, please amend 2 values of the Startup.cs
+If you build the runtime for Ubuntu Desktop using dotnetcore 3.1, please amend 2 values of the Startup.cs.
+The contributor has tested for Ubuntu Linux and Oracle Linux, you can try other Linux.
 
 ➾ userPreference["system"].os = "Linux"; 
 
