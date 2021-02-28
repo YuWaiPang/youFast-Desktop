@@ -85,6 +85,6 @@ An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/p
 
 youFast does not follow traditional approach to build data cubes to support multi-dimensional reporting. It is because building a data cube is a very heavily computing and time consuming exercise, so it is unlikely this approach can support real-time reporting. So youFast has built its distinctive algorithm to achieve real-time multidimensional reporting. 
 
-If your SQL Server implements the youFast algorithm, real-time SQL Server multidimensional reporting may be significantly faster.
+If your SQL Server implements the youFast algorithm, your SQL Server multidimensional reporting may be significantly faster.
 
 The contributor now evaluates the next open source project. Since he has a strong background in the finance department of some listed companies, his preference will consider to build a set of reusable front-end and back-end libraries to support software developers building their next generation of Finance ERP.
