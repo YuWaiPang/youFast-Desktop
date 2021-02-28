@@ -39,7 +39,7 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 # youFast Desktop Features
 
-➾ using C#, Vanilla JavaScript and W3.css for an integrated frontend to backend Web development, it do not implement any javascript framework or library
+➾  using C#, Vanilla JavaScript and W3.css for an integrated frontend to backend Web development, it does not implement any javascript framework or library
 
 ➾  real-time web technology use Fleck websocket
 
