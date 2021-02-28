@@ -21,6 +21,7 @@ If you use Visual Studio to create a new project, please be reminded the followi
 2) Add reference: "System.IO.Compression.FileSystem
 3) Drag and drop folder "Fleck" and other cs file into C# youFast (one item below "Solution 'youFast' (1 of 1 project))
 4) Configure Platform target as x64
+5) Remove default project file "program.cs"
 See this demo video using Visual Studio 2019 Community Edition to build the runtime of the open source "youFast Desktop''. https://youtu.be/W51MFvmVH38
 
 If you use Visual Studio Code to create a new project, it is obviously simple.
