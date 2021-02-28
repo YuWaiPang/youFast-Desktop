@@ -1,4 +1,4 @@
-# Crosstab Report Query from 10 Million Records
+# Crosstab Report Query from its in-memory DB
 ![10 Million Rows Test](https://github.com/YuWaiPang/youFast-Desktop/blob/main/youFast-10MillionRowQuery.png)
 
 # How-To
@@ -41,6 +41,14 @@ You can download youFast Desktop runtime from https://www.linkedin.com/pulse/you
 After you click the runtime file, a folder "uSpace" will be created automatically.Inside the folder you can see there are 32 csv files with folder "exportedFile". This folder is used to keep all downloaded report files. Please note that all simulated csv file names are reserved by the system, so your data files should not use these file names.
 
 Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
+
+1MillionRow.csv
+
+https://drive.google.com/file/d/1NnFV4F45lpA-3AHkdWrkwioGHLqeCRDV/view?usp=sharing 
+
+10MillionRow.csv
+
+https://drive.google.com/file/d/1qmx5lKCni4qGNXfRyNjhK8UpBuTisYwM/view?usp=sharing 
 
 # Features
 
