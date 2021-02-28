@@ -67,7 +67,7 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 # youFast Desktop Contacts
 
-email: max@youfast.net
+Email: max@youfast.net
 
 Website: youfast.net
 
@@ -75,7 +75,7 @@ Company Name: YOUFAST.NET (優快通)
 
 Sponsor Site: https://www.patreon.com/lamiyu
 
-Linkedin profile: https://www.linkedin.com/in/max01/
+Linkedin Profile: https://www.linkedin.com/in/max01/
 
 Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfast.net using Oracle Cloud Free Tier https://www.oracle.com/hk/cloud/free/
 
