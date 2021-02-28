@@ -40,7 +40,7 @@ If you build the runtime for Ubuntu Desktop using dotnetcore 3.1, please amend 2
 
 ➾ userPreference["system"].os = "Linux"; (default is "Windows")
 
-➾ userPreference["system"].slash = "/";  (default is "\\")
+➾ userPreference["system"].slash = "/";  (default is "\\\")
 
 You can download youFast Desktop runtime from https://www.linkedin.com/pulse/youfast-yu-wai-pang-max/
 
