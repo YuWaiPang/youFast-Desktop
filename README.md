@@ -81,6 +81,10 @@ Currently youFast Cloud is hosted in Oracle Linux Cloud VM at http://cloud.youfa
 
 An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/pulse/youfast-net-going-azure-cloud-yu-wai-pang-max/
 
+# About SQL Server
+
+If your SQL Server to implement youFast algorithm, your SQL Server multi-dimensional real-time reporting may be ran significant faster.
+
 
 
 
