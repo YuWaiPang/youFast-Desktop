@@ -11,8 +11,9 @@ youFast Desktop has the following dependencies:-
 If you use Visual Studio to create a new project, please be reminded the following settings:-
 1) Create folder same as assembly name and namespace "youFast"
 2) Add reference: "System.IO.Compression.FileSystem
-3) Drag and drop folder "Fleck" and other cs file into C# youFast (one item below "Solution 'youFast' (1 of 1 project)
+3) Drag and drop folder "Fleck" and other cs file into C# youFast (one item below "Solution 'youFast' (1 of 1 project))
 4) Configure Platform target as x64
+See this demo video using Visual Studo 2019 Community Edition to build the runtime of the open source "youFast Desktop". https://youtu.be/W51MFvmVH38
 
 If you use Visual Studio Code to create a new project, it is obviously simple.
 
