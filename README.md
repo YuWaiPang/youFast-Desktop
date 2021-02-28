@@ -83,7 +83,7 @@ An article titled "youFast.net is going to the Cloud" https://www.linkedin.com/p
 
 # About SQL Server
 
-If your SQL Server to implement youFast algorithm, your SQL Server multi-dimensional real-time reporting may be ran significant faster.
+If your SQL Server implements the youFast algorithm, real-time SQL Server multidimensional reporting may be significantly faster.
 
 
 
