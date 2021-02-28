@@ -7,6 +7,13 @@ youFast Desktop has the following dependencies:-
 
 ➾ Microsoft .net 4.7.2 or 4.8  
 ➾ OR Microsoft .net core 3.1 or above
+➾ Fleck Websocket Library:  https://github.com/statianzo/Fleck
+
+Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
+
+➾ CSS Framework: w3.css (built css code within C# code)
+
+➾ Javascript Framework / Library: none
 
 If you use Visual Studio to create a new project, please be reminded the following settings:-
 1) Create folder same as assembly name and namespace "youFast"
@@ -20,14 +27,6 @@ If you use Visual Studio Code to create a new project, it is obviously simple.
 ➾ http server is using bluehost.com with url http://desktop.youfast.net/
 
    Note: dotnet supports auto start this home page and auto oepn download file, but dotnet core not support this function.
-
-➾ Fleck Websocket Library:  https://github.com/statianzo/Fleck
-
-Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
-
-➾ CSS Framework: w3.css (built css code within C# code)
-
-➾ Javascript Framework / Library: none
 
 If the download file icon you see in your computer is same as the icon in the StartupScreen.png, you success to run youFast Desktop, otherwise it is running youFast Cloud.
 
