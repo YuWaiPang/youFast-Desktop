@@ -67,7 +67,7 @@ Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
 ➾  this project is maintained up to 100% C# source code (i.e. no call for external dll)
 
-# youFast Desktop Contacts
+# youFast.net Contacts
 
 youFast is developing in China (Hong Kong) - a wholly work from home project by a programmer.
 
