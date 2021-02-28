@@ -1,7 +1,7 @@
 # Crosstab Report Query from Its In-memory DB
 ![10 Million Rows Test](https://github.com/YuWaiPang/youFast-Desktop/blob/main/youFast-10MillionRowQuery.png)
 
-# How-To
+# youFast Desktop for Windows
 This youFast Desktop edition is designed for running a calculation engine and a websocket server in your Windows Desktop. It also supports to run in Linux, you need to install Visual Studio Code and build the runtime in Linux environment. In fact the youFast Cloud (http://cloud.youFast.net) is hosted in a linux cloud VM using Ubuntu 20.04 using Oracle Cloud Free Tier service (https://www.oracle.com/hk/cloud/free/). If there are a demand in the future, may create one more open source repository to distribute youFast Cloud and how to documentation - enable you to build the youFast Cloud linux runtime and configuration of Oracle Cloud.
 
 It supports Windows 7, Windows 10 and Ubuntu Desktop 18.04 ~ 20.04 
