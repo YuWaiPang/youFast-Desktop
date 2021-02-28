@@ -42,13 +42,9 @@ After you click the runtime file, a folder "uSpace" will be created automaticall
 
 Demo Video: https://www.youtube.com/channel/UCQoQkyJJBj3k1N9J3Qx1qhA/videos
 
-1MillionRow.csv
+1MillionRow.csv: https://drive.google.com/file/d/1NnFV4F45lpA-3AHkdWrkwioGHLqeCRDV/view?usp=sharing 
 
-https://drive.google.com/file/d/1NnFV4F45lpA-3AHkdWrkwioGHLqeCRDV/view?usp=sharing 
-
-10MillionRow.csv
-
-https://drive.google.com/file/d/1qmx5lKCni4qGNXfRyNjhK8UpBuTisYwM/view?usp=sharing 
+10MillionRow.csv: https://drive.google.com/file/d/1qmx5lKCni4qGNXfRyNjhK8UpBuTisYwM/view?usp=sharing 
 
 # Features
 
