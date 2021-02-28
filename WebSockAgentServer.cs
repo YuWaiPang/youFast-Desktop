@@ -55,68 +55,10 @@ namespace youFast
             int serialID = 0; // to force uniqueness of html ID for adding filter control
             bool isRemove = false;  
             DateTime currentDateTime = DateTime.Now;
-            Random random = new Random();  
-
-            string myHost = System.Net.Dns.GetHostName();
-            string myIP = null;
-            int IP4v = 0;
-            Dictionary<int, string> myIP4V_List = new Dictionary<int, string>();
-
-            if (userPreference["system"].os == "Linux")
-            {
-                foreach (var netInterface in NetworkInterface.GetAllNetworkInterfaces())
-                {
-                    if (netInterface.NetworkInterfaceType == NetworkInterfaceType.Wireless80211 ||
-                        netInterface.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
-                    {
-                        foreach (var addrInfo in netInterface.GetIPProperties().UnicastAddresses)
-                        {
-                            if (addrInfo.Address.AddressFamily == AddressFamily.InterNetwork)
-                            {
-                                IP4v++;
-                                var ipAddress = addrInfo.Address;                                
-                                myIP4V_List.Add(IP4v, ipAddress.ToString());
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            if (userPreference["system"].os == "Windows Client" || userPreference["system"].os == "Windows Server")
-            {
-                for (int i = 0; i < System.Net.Dns.GetHostEntry(myHost).AddressList.Length; i++)
-                {
-                    if (System.Net.Dns.GetHostEntry(myHost).AddressList[i].IsIPv6LinkLocal == false)
-                    {
-                        IP4v++;
-                        myIP = System.Net.Dns.GetHostEntry(myHost).AddressList[i].ToString();
-                        myIP4V_List.Add(IP4v, myIP);
-                    }
-                }
-            }
-           
-            var countIP = myIP4V_List.Count;
-
-            if (userPreference["system"].os == "Windows Client")
-            {               
-                userPreference["system"].serverIP = "127.0.0.1";
-            }
-            else if (countIP > 1)
-            {
-                foreach (KeyValuePair<int, string> item in myIP4V_List)
-                {
-                    Console.WriteLine("Option {0} IP:{1}", item.Key, item.Value);
-                }
-                Console.Write("Please select your option: ");
-                var select = Console.ReadLine();
-                int selected = Int32.Parse(select);
-                userPreference["system"].serverIP = myIP4V_List[selected];
-            }
-            else
-            {
-                userPreference["system"].serverIP = myIP4V_List[1];
-            }
+            Random random = new Random();                                 
+                           
+            userPreference["system"].serverIP = "127.0.0.1";          
+            
 
             Console.WriteLine("youFast websocket server is starting at " + userPreference["system"].serverIP + ":" + userPreference["system"].websocketPort);
             Console.WriteLine("Please open web browser with URL http://desktop.youfast.net");
