@@ -7,6 +7,7 @@ youFast Desktop has the following dependencies:-
 
 ➾ Microsoft .net 4.7.2 or 4.8  
 ➾ OR Microsoft .net core 3.1 or above
+
 ➾ Fleck Websocket Library:  https://github.com/statianzo/Fleck
 
 Please copy the folder of "Fleck/src/Fleck/" to your project folder along with other .cs files.
