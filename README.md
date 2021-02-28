@@ -18,6 +18,7 @@ See this demo video using Visual Studo 2019 Community Edition to build the runti
 If you use Visual Studio Code to create a new project, it is obviously simple.
 
 ➾ http server is using bluehost.com with url http://desktop.youfast.net/
+   Note: dotnet supports auto start this home page and auto oepn download file, but dotnet core not support this function.
 
 ➾ Fleck Websocket Library:  https://github.com/statianzo/Fleck
 
